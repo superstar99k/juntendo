@@ -1,0 +1,155 @@
+.about {
+    background: #e9ebf7;
+    padding-top: vw(75);
+    padding-bottom: vw(75);
+    @include mq(smt) {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+    &-title {
+        .h5 {
+            margin-top: 35px;
+            font-weight: bold;
+            line-height: 27px;
+            text-align: center;
+            color: #6b6b6b;
+        }
+        padding: 0 20px;
+    }
+    &-content {
+        .h3 {
+            span {
+                background-color: #FFEDF2;
+            }
+        }
+        .d-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include mq(sm2) {
+                flex-direction: column;
+            }
+            >.h5 {
+                width: 65%;
+                margin: unset;
+                @include mq(sm2) {
+                    width: 100%;
+                    order: 2;
+                }
+            }
+            .profile {
+                width: 215px;
+                @include mq(sm2) {
+                    order: 1;
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+                }
+                img {
+                    width: 100%;
+                }
+                p {
+                    margin-top: 5px;
+                    margin-bottom: 0;
+                    text-align: left;
+                    font-weight: bold;
+                }
+            }
+        }
+        .d-card {
+            display: flex;
+            justify-content: space-between;
+            @include mq(sm2) {
+                flex-direction: column;
+            }
+            div {
+                width: 46%;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                border: 1px solid #f2879b;
+                padding: 20px;
+                grid-auto-rows: 1fr;
+                .h4 {
+                    font-weight: bold;
+                    text-align: center;
+                }
+                @include mq(sm2) {
+                    width: 100%;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+    .section-image {
+        max-width: 1240px;
+        margin: auto;
+        position: unset;
+        img {
+            height: auto;
+        }
+        .pc-only{
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+}
+
+.btn-group {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    grid-auto-rows: 1fr;
+    @include mq(smt) {
+        flex-direction: column;
+    }
+    a {
+        width: 30%;
+        height: 60px;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        align-items: center;
+        /*Vertical align*/
+        justify-content: center;
+        /*horizontal align*/
+        position: relative;
+        border-radius: 10px;
+        border: 1px solid #f2879b;
+        text-align: center;
+        font-family: "Yu Gothic";
+        font-weight: bold;
+        font-size: fs(16);
+        letter-spacing: 0.05em;
+        line-height: 25px;
+        text-align: center;
+        color: #3d3d3d;
+        background: -webkit-gradient(linear, right top, left top, color-stop(50%, #ffedf2), color-stop(50%, white)) right;
+        background: linear-gradient(to left, #ffedf2 50%, white 50%) right;
+        background-size: 200%;
+        -webkit-transition: .3s ease-out;
+        transition: .3s ease-out;
+        &:hover {
+            background-position: left;
+        }
+        &::after {
+            display: block;
+            content: url(../images/common/arrow.svg);
+            position: absolute;
+            top: 18px;
+            right: 10px;
+        }
+        @include mq(smt) {
+            width: 100%;
+            margin: 5px auto;
+        }
+    }
+}

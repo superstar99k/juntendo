@@ -1,0 +1,25 @@
+
+.contact{
+    background: #e9ebf7;
+    padding-top: vw(75);
+    padding-bottom: vw(75);
+    @include mq(smt) {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+    .guide-btn__link{
+        &:hover{
+            text-decoration: none !important;
+        }
+    }
+}
+
+.number {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: fs(15);
+    letter-spacing: 0.05em;
+    line-height: 27px;
+    text-align: left;
+    color: #775592;
+}
